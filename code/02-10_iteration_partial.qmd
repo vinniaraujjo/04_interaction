@@ -378,18 +378,15 @@ Finally, let's save all these plots as one figure.
 ```{r}
 library(gridExtra)
 
-allplots 
-
-allplots
-
-marrangeGrob(nematode_mods_sel_plots$splot_better,
+allplots <- marrangeGrob(nematode_mods_sel_plots$splot_better,
              ncol = 4, nrow = 4
              )
 
 allplots
 
-ggsave(plot = allplots,
-       "../output/"
+ggsave(
+       filename = "../output/class4.png",
+  plot = allplots
        )
 ```
 
